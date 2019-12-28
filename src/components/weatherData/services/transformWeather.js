@@ -29,15 +29,17 @@ const trasnforWeather = weather_data => {
     const { humidity, temp } = weather_data.main;
     const { speed } = weather_data.wind;
     const weatherstate = getWeahterSate(weather_data);
-
-    const temperature = get_temp(temp)
+    //convertiendo a number por que devuelve string (no se porque)
+    const temperature = parseInt(get_temp(temp))
+    // console.log('valores recibidos : '+humidity+"\ntemperatura : "+temperature+
+    // "\nVelocidad del viento : "+speed+"\nWheatherDate : "+weatherstate)
     const new_data = {
         temperature,
         weatherstate,
         humidity,
         wind: `${speed} m/s`
-
     }
+    console.log(new_data)
     return new_data;
 
 }

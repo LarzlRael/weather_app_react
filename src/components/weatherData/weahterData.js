@@ -8,7 +8,7 @@ export default class weahterData extends Component {
         
         const { temperature, weatherstate, humidity, wind } = this.props.data;
         
-        
+
         return (
             <div className="weatherDataCount">
                 <WeatherTemperature
@@ -20,13 +20,13 @@ export default class weahterData extends Component {
     }
 }
 weahterData.propTypes = {
-    data : propTypes.shape( {
-            temperature : propTypes.number.isRequired,
-            weatherstate: propTypes.string.isRequired,
-            humidity : propTypes.number.isRequired,
-            wind : propTypes.string.isRequired
-        }
-    )  
+    data: propTypes.shape({
+        temperature: propTypes.number.isRequired,
+        weatherstate: propTypes.string.isRequired,
+        humidity: propTypes.number.isRequired,
+        wind: propTypes.string.isRequired
+    }
+    )
 }
 
 

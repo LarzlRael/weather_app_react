@@ -11,11 +11,12 @@ export default class LocationList extends Component {
         onSelectedLocation(city)
     }
     strTocomponenets = cities => (
-        cities.map((city,i) =>
+        cities.map((city, i) =>
             <WeatherLocation
-                id_city={city}
                 key={i}
-                onWeatherLocationClick={() => this.handleWeatherLocationClick(city)} />)
+                city={city.name}
+                onWeatherLocationClick={() => this.handleWeatherLocationClick(city.name)}
+                data={city.data} />)
     )
 
     render() {
